@@ -1,0 +1,14 @@
+@import "../../shared/styles/global.scss";
+
+.Header__container {
+  background: $secondaryBackColor;
+  color: $secondaryTextColor;
+
+  h1,
+  h2,
+  h4,
+  h4,
+  h5 {
+    margin: 0;
+  }
+}

@@ -1,22 +1,33 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+}
+
+p,
+small,
+link,
+a,
+div {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+#root,
 .App {
-  text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
 }

@@ -1,0 +1,15 @@
+@import "../../shared/styles/global.scss";
+
+.MainContainer__container {
+  background: $mainBackColor;
+  color: $mainTextColor;
+  height: 100%;
+
+  h1,
+  h2,
+  h4,
+  h4,
+  h5 {
+    margin: 0;
+  }
+}
