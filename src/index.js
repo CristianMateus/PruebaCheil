@@ -3,6 +3,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+// HOC
+import LoadingHandler from "./hoc/loadingHandler/LoadingHandler";
+import ToastHandler from "./hoc/toastHandler/ToastHandler";
+
 // Routing
 import { BrowserRouter } from "react-router-dom";
 
@@ -10,6 +14,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
+
 // Reducers
 import UiReducer from "./store/reducers/Ui";
 import HotelReducer from "./store/reducers/Hotel";
@@ -30,7 +35,11 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <LoadingHandler>
+        <ToastHandler>
+          <App />
+        </ToastHandler>
+      </LoadingHandler>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

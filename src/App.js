@@ -10,13 +10,27 @@ import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
 
 // React
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
+
+// Redux
+import { connect } from "react-redux";
+import { setAllHotels } from "./store/actions/Hotel";
 
 // Styles
 import "./App.scss";
 
-function App() {
+// Toast
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
+
+const App = ({ setAllHotels }) => {
+  
+  useEffect(() => {
+    setAllHotels();
+  }, [setAllHotels]);
+
   return (
     <div className="App">
       <Header />
@@ -29,6 +43,6 @@ function App() {
       </MainContainer>
     </div>
   );
-}
+};
 
-export default App;
+export default connect(null, { setAllHotels })(App);

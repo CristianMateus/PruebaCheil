@@ -8,7 +8,7 @@ import { PageEnum } from "../../shared/enums/PageEnum";
 import { allHotels } from "../../mockups/HotelsMockup";
 
 // UiActions
-import { setPageLoading } from "../actions/Ui";
+import { setPageLoading, showSuccessToast } from "../actions/Ui";
 
 export const setAllHotels = () => dispatch => {
   setTimeout(() => {
@@ -16,6 +16,7 @@ export const setAllHotels = () => dispatch => {
       type: actionTypes.SET_ALL_HOTELS,
       payload: allHotels
     });
-    setPageLoading(PageEnum.Home, false);
-  }, [1000]);
+    dispatch(setPageLoading(PageEnum.Home, false));
+    dispatch(showSuccessToast('Hoteles obtenidos!'));
+  }, [2000]);
 };

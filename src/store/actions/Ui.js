@@ -27,7 +27,7 @@ export const showDangerToast = message => dispatch => {
 };
 
 export const setPageLoading = (pageEnum, showPageLoading) => dispatch => {
-  if (!pageEnum) return;
+  if (!pageEnum && pageEnum !== 0) return;
   let pageLoading = {};
   switch (pageEnum) {
     case PageEnum.Home:
