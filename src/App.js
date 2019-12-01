@@ -1,26 +1,22 @@
-import 'devextreme/dist/css/dx.common.css';
-import 'devextreme/dist/css/dx.light.css';
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Components
+import Header from "./layout/header/Header";
+import MainContainer from "./layout/mainContainer/MainContainer";
+
+// Devexpress Stylesheets
+import "devextreme/dist/css/dx.common.css";
+import "devextreme/dist/css/dx.light.css";
+
+// React
+import React from "react";
+
+// Styles
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MainContainer />
     </div>
   );
 }
