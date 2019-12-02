@@ -1,0 +1,34 @@
+@import "../../../styles/global.scss";
+
+.Card__container {
+  background: $cardBackColor;
+  border-radius: 0.1em;
+  overflow: hidden;
+
+  .Card__image {
+    height: 11em;
+    cursor: pointer;
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    background-size: 120% 103%;
+    transition: 0.2s all ease-in;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .Card__image:hover {
+    background-size: 124% 108%;
+  }
+
+  .Card__info {
+    padding: 0.5em;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0.5em 0 0.3em;
+    }
+  }
+}

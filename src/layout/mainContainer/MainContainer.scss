@@ -4,6 +4,9 @@
   background: $mainBackColor;
   color: $mainTextColor;
   height: 100%;
+  padding: 1em;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   h1,
   h2,

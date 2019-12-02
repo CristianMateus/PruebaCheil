@@ -4,10 +4,14 @@ import "./Header.scss";
 // React
 import React from "react";
 
+// React Icons
+import { IoIosMap } from "react-icons/io";
+
 const Header = () => {
   return (
     <div className="Header__container">
-      <h1>Header</h1>
+      <IoIosMap/>
+      <h5>Cristian M.</h5>
     </div>
   );
 };
