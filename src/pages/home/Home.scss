@@ -1,6 +1,12 @@
 .Home__container {
   width: 100%;
 
-  .Home__search {
+  .Home__hotel-not-found {
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }

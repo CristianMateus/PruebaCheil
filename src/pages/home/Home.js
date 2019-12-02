@@ -30,6 +30,14 @@ const Home = ({ allHotels = [] }) => {
   const getHotels = () => {
     if (allHotels.length === 0) return null;
 
+    if (getFilteredHotels().length === 0) {
+      return (
+        <div className="Home__hotel-not-found">
+          <p>No se encontrarón hoteles con el nombre {searchedValueState}</p>
+        </div>
+      );
+    }
+
     return getFilteredHotels().map(hotel => (
       <Card
         key={hotel.id}

@@ -9,7 +9,8 @@ const doesObjectHaveString = (object, objectKeys, filterValue) => {
       .toLowerCase()
       .match(filterValue.toLowerCase());
     //   If value does not match or matches but does not have the rigth index
-    if (!matchedValue || matchedValue.index !== 0) return;
+    // if (!matchedValue || matchedValue.index !== 0) return;
+    if (!matchedValue) return;
     validKeys.push(object[key]);
   });
   if (validKeys.length === 0) {
